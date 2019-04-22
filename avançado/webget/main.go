@@ -28,14 +28,14 @@ func main() {
 		fmt.Println(string(corpo))
 	}
 
-	request, err := http.NewRequest("GET", "https://www.nerduniverse.com.br", nil)
+	request, err := http.NewRequest("GET", "https://www.google.com.br", nil)
 	if err != nil {
 		fmt.Println("[main] Erro ao criar um request. Erro:", err.Error())
 		return
 	}
 	request.SetBasicAuth("teste", "teste")
 	resposta, err = cliente.Do(request)
-	resposta, err = cliente.Get("https://www.nerduniverse.com.br")
+	resposta, err = cliente.Get("https://www.google.com.br")
 	if err != nil {
 		fmt.Println("[main] Erro ao abrir a página do Google Brasil. Erro:", err.Error())
 		return
